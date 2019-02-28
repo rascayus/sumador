@@ -1,18 +1,30 @@
 package sumador;
 
+/**
+ * @author Juan Diego Alonso Navarro
+ * version 1.0
+ *
+ */
 public class ASumar {
 
 	private String valor_inicial;
 
-	public ASumar(String string) { // Este método almacena la variable que le introducimos
-		this.valor_inicial = string;
+	/**
+	 *  Este método almacena la variable que le introducimos
+	 * @param valor_inicial
+	 */
+	public ASumar(String valor_inicial) {
+		this.valor_inicial = valor_inicial;
 	}
-	public String total() {// Este método calcula  la suma y la cadena del resultado
+	/**
+	 * Este método calcula  la suma y la cadena del resultado
+	 * @return Devuelve la suma de los digitos de la cadena introducida y la cadena con los dígitos
+	 */
+	public String total() { 
         int suma = 0;
         String resultado ="";
-        String numero = valor_inicial;
-        for (int i = 0; i < numero.length(); i++) {
-            String digito = numero.substring(i,i+1);
+        for (int i = 0; i < valor_inicial.length(); i++) {
+            String digito = valor_inicial.substring(i,i+1);
             suma += Integer.parseInt(digito);
             if (i < 1) {
             	resultado += digito;
@@ -23,12 +35,13 @@ public class ASumar {
         return (resultado + " = " + suma);
 
     }
-	public String mostrar() { //Este método muestra el resultado a partir de la variable introducida
+	/**
+	 * Este método muestra el resultado a partir de la variable introducida
+	 * @return Devuelve cadena vacia si es negativo o el resultado esperado si es positivo
+	 */
+	public String mostrar() { //
 		 String numero = valor_inicial;
-		 if (numero.length() == 1) {
-	            return (numero + " = " + numero);
-		}
-		 else if (Integer.parseInt(numero) < 0) {
+		 if (Integer.parseInt(numero) < 0) {
 			 return ("");
 		}
 	        
