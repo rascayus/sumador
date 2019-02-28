@@ -8,9 +8,9 @@ public class TestASumar {
 
 	@Test
 	public void testUnaCifra() {
-        ASumar sumi = new ASumar("7");
+        ASumar sumi = new ASumar("-17785");
         String resultado = sumi.mostrar();
-        assertEquals("7 = 7",resultado );
+        assertEquals("",resultado );
     }
 
 }

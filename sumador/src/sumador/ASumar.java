@@ -8,11 +8,16 @@ public class ASumar {
 		this.valor_inicial = string;
 	}
 
-	public String mostrar() { //Esta método muestra el resultado a partir de la variable introducida
+	public String mostrar() { //Este método muestra el resultado a partir de la variable introducida
 		 String numero = valor_inicial;
-	        if (numero.length() == 1) {
+		 int suma = 0;
+		 if (numero.length() == 1) {
 	            return (numero + " = " + numero);
 		}
-	        else return ("Introduzca un número valido");
+		 else if (Integer.parseInt(numero) < 0) {
+			 return ("");
+		}
+	        
+	      else return ("Introduzca un número valido");
 	}
 }
